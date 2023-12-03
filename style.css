@@ -1,0 +1,254 @@
+html,
+html>body {
+  margin: auto;
+  height: 100%;
+  font-family: 'Righteous', cursive;
+  color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+  background-color: rgb(15, 13, 13);
+}
+
+#reportSection,
+#aboutSection {
+  display: none;
+}
+
+#coinPicDiv {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1;
+}
+
+#coinPicDiv img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 50%;
+  animation: coinBorder;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.headline h3 {
+  border: 1px solid;
+  border-radius: 20px;
+  padding:5px;
+  animation: coinBorder;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes coinBorder {
+
+  0%,
+  100% {
+
+    box-shadow: 0px 0px 6px 6px rgb(31, 255, 248), 0px 0px 6px 6px rgb(17, 87, 122);
+  }
+
+  50% {
+    box-shadow: 0px 0px 6px 6px rgb(134, 39, 242), 0px 0px 6px 6px rgb(5, 25, 240)
+  }
+}
+
+#coinsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.progress {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.progress-bar {
+  height: 30px;
+  background-color: #4d7de2;
+  width: 0%;
+  animation: progress-bar 0.3s;
+}
+
+@keyframes progress-bar {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+#reportSectionAlertDiv svg {
+  width: 25px;
+  height: 25px;
+}
+
+#reportSectionAlertDiv {
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+#closeTheAlert {
+  display: flex;
+}
+
+button {
+  transition: transform 0.3s !important;
+}
+
+button:hover {
+  transform: translateY(-5px) !important;
+}
+
+#coinsContainer>.card {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+#coinsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+#xModalButton {
+  background-color: white;
+}
+
+.chartDiv {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.myNavbar {
+  background-color: rgb(17, 22, 26);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 320px;
+}
+
+.divForStyle {
+  display: flex;
+  justify-content: center;
+  gap: 490px;
+  margin-left: 10px;
+}
+
+.searchContainer>input {
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+
+  color: rgb(255, 255, 255);
+  background-color: rgb(11, 10, 10);
+}
+
+#reportSection,
+#homeSection,
+#aboutSection {
+  margin-left: 30px;
+}
+
+#closeTheAlert {
+  display: flex;
+  justify-content: center;
+}
+
+#infoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ;
+}
+
+#infoDiv img {
+  height: 600px;
+}
+
+#aboutInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 500px;
+  word-wrap: break-word;
+}
+
+#aboutInfo h3 {
+  text-decoration: underline;
+}
+
+#myPicture {
+  margin-right: 20px;
+}
+
+.bitCoin {
+  width: 50px;
+  height: 50px;
+  background-image: url(assets/images/bitcoin.png);
+  background-size: cover;
+  display: inline-block;
+  animation: movingUpBall;
+  animation-iteration-count: infinite;
+}
+
+.ethereum {
+  width: 60px;
+  height: 50px;
+  background-image: url(assets/images/etherium.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  animation: movingUpBall;
+  animation-iteration-count: infinite;
+}
+
+.bitCoin,
+.ethereum {
+  animation-duration: var(--ad);
+  animation-delay: var(--del);
+  transform: translateY(1000px);
+}
+
+@keyframes movingUpBall {
+  100% {
+    transform: translateY(1000px);
+  }
+
+  0% {
+    transform: translateY(-200px);
+  }
+}
+
+#backgroundContainer {
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  z-index: -1;
+  margin: 10px;
+  width: 100%;
+
+}
+
+.card .card-body {
+  background-color: transparent;
+}
+
+#modalId .card {
+  background-color: rgb(15, 13, 13);
+  color: white;
+}
+
+.modal>.modal-dialog>.modal-content {
+  background-color: rgb(15, 13, 13);
+}
